@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Finančnik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --ink: #1a1a18;
+      --muted: #6b6b60;
+      --accent: #2e6b4f;
+      --accent-light: #e8f2ed;
+      --bg: #f7f5f0;
+      --paper: #fdfcf9;
+      --border: #e2ded5;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+ 
+    /* Header */
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+ 
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+ 
+    .app-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+ 
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+ 
+    .updated {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      font-family: var(--serif);
+    }
+ 
+    /* Layout */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+ 
+    /* Intro card */
+    .intro-card {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .intro-card::before {
+      content: '🔒';
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 48px;
+      opacity: 0.15;
+    }
+ 
+    .intro-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+ 
+    .intro-card strong {
+      font-weight: 500;
+      opacity: 1;
+    }
+ 
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+    }
+ 
+    h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+ 
+    h3 {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 28px 0 10px;
+    }
+ 
+    p {
+      color: #3a3a34;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+ 
+    p:last-child { margin-bottom: 0; }
+ 
+    /* Lists */
+    ul, ol {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 14px;
+    }
+ 
+    ul li, ol li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #3a3a34;
+    }
+ 
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+ 
+    ol { counter-reset: list; }
+    ol li { counter-increment: list; }
+    ol li::before {
+      content: counter(list) '.';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 500;
+      top: 2px;
+    }
+ 
+    /* Data row highlights */
+    .data-row {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #3a3a34;
+    }
+ 
+    .data-row strong {
+      color: var(--ink);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 2px;
+    }
+ 
+    /* Contact block */
+    .contact-block {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+ 
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+ 
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+    }
+ 
+    .contact-block a:hover { text-decoration: underline; }
+    .contact-block small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+ 
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+ 
+    @media (max-width: 480px) {
+      .intro-card { padding: 22px 20px; }
+      main { padding: 36px 18px 60px; }
+    }
+  </style>
+</head>
+<body>
+ 
+<header>
+  <div class="app-badge">Android Application</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: May 21, 2026</p>
+</header>
+ 
+<main>
+ 
+  <div class="intro-card">
+    <p>
+      <strong>Finančnik is a local-first application.</strong> All the data you enter — transactions, categories, and financial records — is stored only on your device and is never transmitted to our servers or any third parties.
+    </p>
+  </div>
+ 
+  <section>
+    <h2>Definitions</h2>
+    <p>For the purposes of this Privacy Policy:</p>
+    <div class="data-row"><strong>Application</strong> Refers to Finančnik, the software program provided by the Company.</div>
+    <div class="data-row"><strong>Company</strong> Referred to as "We", "Us" or "Our" — Finančnik (Svit Janc).</div>
+    <div class="data-row"><strong>Device</strong> Any device that can access the Service, such as a cell phone or digital tablet.</div>
+    <div class="data-row"><strong>Personal Data</strong> Any information that relates to an identified or identifiable individual. For this Application, this includes the financial transactions you enter.</div>
+    <div class="data-row"><strong>Usage Data</strong> Data collected automatically by the Android operating system (such as crash reports via Google Play), not by the Company itself.</div>
+    <div class="data-row"><strong>You</strong> The individual accessing or using the Service.</div>
+  </section>
+ 
+  <section>
+    <h2>Data We Collect</h2>
+ 
+    <h3>Local Data (Financial Records)</h3>
+    <p>While using the Service, you may enter financial information such as amounts, dates, and categories.</p>
+    <ul>
+      <li><strong>Storage:</strong> This data is stored locally on your device using an internal database (Room).</li>
+      <li><strong>Access:</strong> We do not have access to this data. It never leaves your device.</li>
+    </ul>
+ 
+    <h3>Personal Data</h3>
+    <p>We do not require you to create an account, nor do we ask for your name, email, or phone number to use the Application.</p>
+ 
+    <h3>Usage Data</h3>
+    <p>Usage Data may be collected automatically by Google Play if you have opted into sharing diagnostic data with developers. This may include device type, operating system version, and crash logs to help us improve the Application.</p>
+  </section>
+ 
+  <section>
+    <h2>How We Use Your Data</h2>
+    <p>The Company uses the information you provide exclusively within the Application to:</p>
+    <ul>
+      <li>Provide the financial tracking functionality.</li>
+      <li>Calculate and display your account balance.</li>
+      <li>Filter and organize your transactions.</li>
+    </ul>
+    <p>We do not sell, share, or disclose your financial data to any third parties.</p>
+  </section>
+ 
+  <section>
+    <h2>Data Retention</h2>
+    <p>The Company does not retain your Personal Data on any external servers.</p>
+    <ul>
+      <li><strong>User control:</strong> Your financial records are stored on your device for as long as the Application is installed.</li>
+      <li><strong>Deletion:</strong> If you delete the Application, all locally stored data will be permanently removed from your device.</li>
+    </ul>
+  </section>
+ 
+  <section>
+    <h2>Data Transfer</h2>
+    <p>Since your data is stored locally, no transfer of your Personal Data to other countries or jurisdictions takes place by the Company.</p>
+  </section>
+ 
+  <section>
+    <h2>Your Rights</h2>
+    <p>You have the right to delete all your data at any time by:</p>
+    <ol>
+      <li>Deleting individual transactions within the app.</li>
+      <li>Clearing the Application storage in your device settings.</li>
+      <li>Uninstalling the Application.</li>
+    </ol>
+  </section>
+ 
+  <section>
+    <h2>Security</h2>
+    <p>The security of your data depends on the security of your device. We recommend using device-level security (PIN, fingerprint, or password) to protect the information stored on your device.</p>
+  </section>
+ 
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Our Service does not knowingly collect any personally identifiable information from anyone. Since all data is local, we do not have a way to identify the age of the user.</p>
+  </section>
+ 
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last updated" date at the top of this page.</p>
+  </section>
+ 
+  <section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, you can reach us at:</p>
+    <div class="contact-block">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <a href="mailto:svit.janc@gmail.com">svit.janc@gmail.com</a>
+        <small>We typically respond within a few business days.</small>
+      </div>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer>
+  &copy; 2026 Finančnik — Svit Janc. All rights reserved.
+</footer>
+ 
+</body>
+</html>
